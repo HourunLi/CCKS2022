@@ -74,7 +74,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 - 训练效果
 
-	![image-20220605153424391](img\tokenizer_eval.png)
+	![tokenizer evaluation](img\tokenizer_eval.png)
 
 - 输出样例
 
