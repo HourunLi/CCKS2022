@@ -2,7 +2,7 @@
 
 <p align = right> 李厚润 2019202463</p>
 
-## 一. 数据集
+## 一. 数据
 
 所有数据集以及数据处理程序都位于`./data/`文件夹下。
 
@@ -12,7 +12,13 @@ $IntermediateFullData$是基于$FullData$文件夹下完整数据集跑出来的
 
 ## 二 思路
 
-## 三. 复现
+整个模型包含两个模块，分别是Sequence Label Model和Text Classification Model，其中这两个模块都是基于Bert模型实现的。
+
+Sequence Label Model用于将只有context和question的文本进行序列标签，标注出对应的condition，fine和coarse。
+
+Text Classification Model用于将第一部分标注出来的标签进行联系，从而得出condition_coarse, condition_fine, coarse_fine的联系。这个模型一共分为两个部分，分别是查找condition和coarse或者fine之间的联系，以及coarse和fine之间的联系，由于两个任务目标的性质不太相同，所以我们把它划分为两个结构一样但是任务目标不同的文本分类模型来完成。
+
+## 三. 实验步骤
 
 ### Part 1. Sequence Label Model
 
@@ -204,3 +210,4 @@ $IntermediateFullData$是基于$FullData$文件夹下完整数据集跑出来的
 
 ### 四. 测试结果
 
+![image-20220605152034679](C:\Users\HASEE\AppData\Roaming\Typora\typora-user-images\image-20220605152034679.png)
