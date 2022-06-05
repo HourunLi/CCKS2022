@@ -74,7 +74,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 - 训练效果
 
-	![image-20220604225340985](C:\Users\HASEE\AppData\Roaming\Typora\typora-user-images\image-20220604225340985.png)
+	![image-20220605153424391](img\tokenizer_eval.png)
 
 - 输出样例
 
@@ -164,17 +164,19 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 	- 第一组
 
-		```bash
-		cd ./src
-		# train over again
-		python match_relation.py  --model_name_or_path bert-base-chinese --train_file ../data/FullData/train_for_matchRelat_condition_x.json  --validation_file ../data/FullData/validation_for_matchRelat_condition_x.json --test_file ../data/FullData/predict_for_matchRelat_condition_x.json --do_train --do_eval --do_predict --num_train_epochs 4 --overwrite_output_dir --output_dir ./relation_condition_x  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
-		
-		# load model weight from reserved file and do predict only
-		python match_relation.py  --model_name_or_path ./relation_condition_x --train_file ../data/FullData/train_for_matchRelat_condition_x.json  --validation_file ../data/FullData/validation_for_matchRelat_condition_x.json --test_file ../data/FullData/predict_for_matchRelat_condition_x.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_condition_x  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
-		```
+	  ```bash
+	  cd ./src
+	  # train over again
+	  python match_relation.py  --model_name_or_path bert-base-chinese --train_file ../data/FullData/train_for_matchRelat_condition_x.json  --validation_file ../data/FullData/validation_for_matchRelat_condition_x.json --test_file ../data/FullData/predict_for_matchRelat_condition_x.json --do_train --do_eval --do_predict --num_train_epochs 4 --overwrite_output_dir --output_dir ./relation_condition_x  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
+	  
+	  # load model weight from reserved file and do predict only
+	  python match_relation.py  --model_name_or_path ./relation_condition_x --train_file ../data/FullData/train_for_matchRelat_condition_x.json  --validation_file ../data/FullData/validation_for_matchRelat_condition_x.json --test_file ../data/FullData/predict_for_matchRelat_condition_x.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_condition_x  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
+	  ```
+
+	  ![image-20220605153138453](img/condition_x.png)
 
 	- 第二组
-
+	
 		```bash
 		cd ./src
 		# train over again
@@ -183,6 +185,8 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 		# load model weight from reserved file and do predict only
 		python match_relation.py  --model_name_or_path ./relation_coarse_fine --train_file ../data/FullData/train_for_matchRelat_coarse_fine.json  --validation_file ../data/FullData/validation_for_matchRelat_coarse_fine.json --test_file ../data/FullData/predict_for_matchRelat_coarse_fine.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_coarse_fine  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
 		```
+
+![image-20220605153029461](img\coarse_fine.png)
 
 #### 4. Get Answer
 
@@ -210,4 +214,4 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 ### 四. 测试结果
 
-![image-20220605152034679](C:\Users\HASEE\AppData\Roaming\Typora\typora-user-images\image-20220605152034679.png)
+![image-20220605152034679](\img\judge_result.png)
