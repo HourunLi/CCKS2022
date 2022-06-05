@@ -74,7 +74,11 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 - 训练效果
 
+<<<<<<< HEAD
 	![tokenizer evaluation](img\tokenizer_eval.png)
+=======
+	![tokenizer_evaluation](https://github.com/HourunLi/CCKS2022/blob/master/img/tokenizer_eval.png)
+>>>>>>> 2cc2f5085dff077d78972fc6c8afe94a5ede399f
 
 - 输出样例
 
@@ -173,7 +177,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 	  python match_relation.py  --model_name_or_path ./relation_condition_x --train_file ../data/FullData/train_for_matchRelat_condition_x.json  --validation_file ../data/FullData/validation_for_matchRelat_condition_x.json --test_file ../data/FullData/predict_for_matchRelat_condition_x.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_condition_x  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
 	  ```
 
-	  ![image-20220605153138453](img/condition_x.png)
+	 ![condition_x](https://github.com/HourunLi/CCKS2022/blob/master/img/condition_x.png)
 
 	- 第二组
 	
@@ -186,7 +190,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 		python match_relation.py  --model_name_or_path ./relation_coarse_fine --train_file ../data/FullData/train_for_matchRelat_coarse_fine.json  --validation_file ../data/FullData/validation_for_matchRelat_coarse_fine.json --test_file ../data/FullData/predict_for_matchRelat_coarse_fine.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_coarse_fine  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
 		```
 
-![image-20220605153029461](img\coarse_fine.png)
+	![coarse_fine](https://github.com/HourunLi/CCKS2022/blob/master/img/coarse_fine.png)
 
 #### 4. Get Answer
 
@@ -214,4 +218,4 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 ### 四. 测试结果
 
-![image-20220605152034679](\img\judge_result.png)
+![judge_result](https://github.com/HourunLi/CCKS2022/blob/master/img/judge_result.png)
