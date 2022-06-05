@@ -186,7 +186,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 		python match_relation.py  --model_name_or_path ./relation_coarse_fine --train_file ../data/FullData/train_for_matchRelat_coarse_fine.json  --validation_file ../data/FullData/validation_for_matchRelat_coarse_fine.json --test_file ../data/FullData/predict_for_matchRelat_coarse_fine.json  --do_eval --do_predict --num_train_epochs 3 --overwrite_output_dir --output_dir ./relation_coarse_fine  --overwrite_cache --per_device_train_batch_size 64 --save_strategy "epoch" --evaluation_strategy "epoch"
 		```
 
-![image-20220605153029461](img\coarse_fine.png)
+![[image-20220605153029461](img\coarse_fine.png)](https://github.com/HourunLi/CCKS2022/blob/master/img/coarse_fine.png)
 
 #### 4. Get Answer
 
