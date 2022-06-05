@@ -74,11 +74,7 @@ Text Classification Model用于将第一部分标注出来的标签进行联系�
 
 - 训练效果
 
-<<<<<<< HEAD
-	![tokenizer evaluation](img\tokenizer_eval.png)
-=======
 	![tokenizer_evaluation](https://github.com/HourunLi/CCKS2022/blob/master/img/tokenizer_eval.png)
->>>>>>> 2cc2f5085dff077d78972fc6c8afe94a5ede399f
 
 - 输出样例
 
