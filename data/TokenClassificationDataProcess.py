@@ -61,12 +61,6 @@ def prepareTrainingData(file_name, output_file):
     f_r.close()
     f_w.close()
 
-# label_to_id = {
-#     "None":0,
-#     "B-condition":1,
-#     "I-condition":2,
-
-# }
 """
  tag: 0 for None, 1 for condition, 2 for condition, 3 for coarse, 4 for [SEP].
  flag: 0 for prediction, 1 for traning or validation
