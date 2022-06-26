@@ -1,6 +1,6 @@
 import json
 
-
+# preprocess the training data for the second module
 def prepareTrainingData(file_name, output_file_condition_x, output_file_coarse_fine):
     with open(file_name, 'r', encoding='utf-8') as f_r, open(output_file_condition_x, "w", encoding="utf-8") as f_w1, \
             open(output_file_coarse_fine, "w", encoding="utf-8") as f_w2:
