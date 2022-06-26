@@ -245,6 +245,7 @@ def getPredictResult(raw_data, tokenizer_predictions_file, output_file):
             raw_data = f_r1.readline()
             line = f_r2.readline()
 
+# preprocess the raw data for traning or validation
 def trainingDataPreprocess():
     # prepareTrainingData_singleWord(file_name = "./SampleData/train_raw.json", output_file = "./SampleData/train_for_tokClasfy.json")
     # prepareValidorPredictData(file_name = "./SampleData/validation_raw.json", output_file = "./SampleData/validation_for_tokClasfy.json", flag = 1)
@@ -259,6 +260,7 @@ def trainingDataPreprocess():
     prepareTrainingData_singleWord(file_name = "./FullData/validation_raw.json", output_file = "./FullData/validation_for_tokClasfy.json")
     prepareTrainingData_singleWord(file_name = "./FullData/predict_raw.json", output_file = "./FullData/predict_for_tokClasfy.json", flag = 0)
 
+# preprocess the raw data for prediction
 def predictDataPostprocess():
     getPredictResult(raw_data = "./FullData/predict_raw.json", tokenizer_predictions_file = "../src/tokenizer/predictions.txt", output_file = "./IntermediateFullData/tokenizer_result.json")
 
